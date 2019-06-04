@@ -1,0 +1,22 @@
+{
+  "name": "to-services",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://blcoccaro@bitbucket.org/intuitisolucoestecnologicas/to-services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/intuitisolucoestecnologicas/to-services#readme"
+}
