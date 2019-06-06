@@ -1,5 +1,5 @@
 {
     "api": {
-        "uri": "http://localhost:2002/"
+        "uri": "http://172.30.5.2:2002"
     }
 }

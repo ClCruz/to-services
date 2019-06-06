@@ -8,18 +8,21 @@ var fs = require('fs');
 
 var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
-
 (async function () {
     try {
         console.log(`Started service.`);
-
-        //let task = cron.schedule("* * * * * *", () => {
+        console.log(`API: ${config.api.uri}}`);
+        let task = cron.schedule("0 59 23 * * * *", () => {
             let sitemap = require("./tasks/sitemap/index");
             sitemap.start(config);
             //   console.log("running a task every minute - "+config.api.uri);
-        //}, { scheduled: false });
+        }, { scheduled: false, timezone: "America/Sao_Paulo" });
 
-//        task.start();
+       task.start();
+       
+       let sitemap = require("./tasks/sitemap/index");
+       sitemap.start(config);
+
     } catch (err) {
         console.log(err);
         process.exit(1);

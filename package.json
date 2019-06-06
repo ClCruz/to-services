@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "example": "examples",
     "test": "test"
   },
   "dependencies": {
@@ -19,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
