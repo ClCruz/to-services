@@ -25,14 +25,14 @@ module.exports = {
         let current = this;
         console.log(`found: ${sites.length}`);
         sites.forEach(function(value){
-            if (value.hourafterlastgenerated>24) {
+            if (value.hourafterlastgenerated>8) {
                 console.log(`executing ${value.uniquename}...`);
             }
             else {
-                console.log(`executing ${value.uniquename}... but has less then 24 hours, so now I stop.`);
+                console.log(`executing ${value.uniquename}... but has less then 8 hours, so now I stop.`);
             }
             
-            if (value.hourafterlastgenerated>24) {
+            if (value.hourafterlastgenerated>8) {
                 const url = `/v1/gen_sitemap?uniquename=${value.uniquename}`;
                 request({ method: "POST", baseUrl: current.config.api.uri, uri: url, json: true })
                 .then(function(res){ 
